@@ -64,7 +64,7 @@ async function createCard() {
           </div>
           <div class="card-content">
             <div class="card-poster-floating">
-              <img src="https:image.tmdb.org/t/p/w500${filme.poster_path}" alt="Pôster do Filme" class="card-image">
+              <img src="https://image.tmdb.org/t/p/w500${filme.poster_path}" alt="Pôster do Filme" class="card-image">
             </div>
             <div class="card-description">
               <p class="card-summary">${filme.overview}</p>

@@ -1,15 +1,17 @@
+/* Estilos globais e configurações mantidos */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 :root {
     --font: "Inter", system-ui;
     --black: #000;
     --grey: #1C1C1C;
-    --white: #fff
+    --white: #fff;
 }
 
 body {
@@ -23,16 +25,15 @@ header {
     background-color: var(--black);
 }
 
-
 .title-page {
     color: var(--white);
     font-size: 3rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 3rem 0 2rem 0;
 }
+
 
 .container-card {
     display: flex;
@@ -81,7 +82,7 @@ header {
     z-index: 1;
     border-radius: 10px;
     width: 45rem;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
 }
 
 .floating-card-header {
@@ -90,10 +91,11 @@ header {
 }
 
 .close-btn {
-    position: fixed;
-    left: 97%;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     width: 16px;
-    padding: 0.5rem 0.5rem 0 0;
+    padding: 0.5rem;
     background-color: transparent;
     border: 0;
 }
@@ -123,4 +125,71 @@ header {
     font-size: 14px;
     padding-bottom: 1rem;
     gap: 2rem;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .floating-card {
+        width: 85%;
+        padding: 1rem;
+        top: 10%;
+        transform: translateX(-50%);
+    }
+
+    .card-image {
+        height: 12rem;
+    }
+
+    .card-summary {
+        font-size: 0.9rem;
+    }
+}
+
+/* Smartphones  */
+@media (max-width: 480px) {
+    .floating-card {
+        width: 90%;
+        padding: 1rem;
+        top: 5%;
+        transform: translateX(-50%);
+        overflow-y: auto;
+        max-height: 90vh;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-summary {
+        font-size: 0.85rem;
+    }
+
+    .card-movie {
+        font-size: 0.75rem;
+    }
+
+
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-poster-floating {
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    .card-image {
+        width: 100%;
+        height: auto;
+        max-height: 20rem;
+        border-radius: 10px;
+    }
+
+    .card-description {
+        text-align: center;
+        padding: 0 1rem;
+    }
 }

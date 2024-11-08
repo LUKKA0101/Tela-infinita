@@ -32,12 +32,12 @@ async function createCard() {
     vote_count: number;
   }
 
-  const filmes: typeMovie[] = data.results;
+  const movie: typeMovie[] = data.results;
 
-  filmes.forEach((filme: typeMovie) => {
+  movie.forEach((filme: typeMovie) => {
     let cardImage = document.createElement("img");
     cardImage.className = "card-poster";
-    cardImage.src = `https:image.tmdb.org/t/p/w500${filme.poster_path}`;
+    cardImage.src = `https://image.tmdb.org/t/p/w500${filme.poster_path}`;
 
     let cardTitle = document.createElement("h1");
     cardTitle.className = "card-name";

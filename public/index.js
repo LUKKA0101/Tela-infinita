@@ -26,11 +26,11 @@ function createCard() {
     return __awaiter(this, void 0, void 0, function* () {
         const data = yield featchMovies();
         const containerCard = document.querySelector(".container-card");
-        const filmes = data.results;
-        filmes.forEach((filme) => {
+        const movie = data.results;
+        movie.forEach((filme) => {
             let cardImage = document.createElement("img");
             cardImage.className = "card-poster";
-            cardImage.src = `https:image.tmdb.org/t/p/w500${filme.poster_path}`;
+            cardImage.src = `https://image.tmdb.org/t/p/w500${filme.poster_path}`;
             let cardTitle = document.createElement("h1");
             cardTitle.className = "card-name";
             cardTitle.textContent = filme.title;

@@ -226,7 +226,7 @@ npm run dev
 | GET    | `/movie`      | List all movies   |
 | POST   | `/movie`      | Create new movie  |
 | PUT    | `/movie/:id`  | Update a movie    |
-| DELETE | `/movie/:id`  | Delete a movie    |
+| DELETE | `/movie/:id`  | Delete a movie    |d myapi
 
 ---
 
